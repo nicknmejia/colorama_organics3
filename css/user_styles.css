@@ -1,0 +1,24 @@
+.margin_push_top_small{
+	margin-top: 15px;
+}
+
+.margin_push_top_big{
+	margin-top: 30px;
+}
+
+.margin_push_bot{
+	margin-bottom: 15px;
+}
+
+.line_top{
+	border-top: 2px black solid;
+}
+
+.big_char{
+	font-size: 4em;
+}
+
+.centered{
+	margin: auto;
+	text-align: center;
+}
