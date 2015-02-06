@@ -1,5 +1,4 @@
 <?php 
-include('../../inc/db.php');
 function Items($table, $name)
 {
 	try {

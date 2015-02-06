@@ -1,4 +1,5 @@
 <?php 
+include('../../inc/db.php');
 include('../../models/Items.php');
 include('../../models/TempOrder.php');
 class Order{
@@ -10,6 +11,7 @@ class Order{
 
 	public function SubmitOrderTemp()
 	{
+			$order_id;
 		//1. Gather order information
 			$info_key = ['f_name','l_name','email','s_name','s_num','territory','date','s_instruct'];
 			$order_info = [];
@@ -17,8 +19,9 @@ class Order{
 				array_push($order_info, $_POST[$value]);
 			}
 		//2. Create temporary order in DB & select auto increment ID
-			CreateTempOrder($order_info)
 
+			CreateTempOrder($order_info);
+			$id = $pdo->lastInsertId();
 		//3. Select Items from each category
 
 		//4. Use previous query to select all item input

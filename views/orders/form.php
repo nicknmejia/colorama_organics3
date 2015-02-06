@@ -33,7 +33,7 @@ include('../../ctrl/orderController.php');
 				<input type="text" id="datepicker" placeholder="Date" name="date" id="date">
 			</div>
 			<div class="large-3 columns">
-				<textarea placeholder="Special Instructions" name="sinstruct" id="sinstruct"></textarea>
+				<textarea placeholder="Special Instructions" name="s_instruct" id="s_instruct"></textarea>
 			</div>
 		</div>
 	</div>
