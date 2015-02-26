@@ -1,5 +1,23 @@
-<?php include('inc/header.php') ?>
-
+<?php
+$path = "";
+include('inc/header.php');
+?>
+ <?php
+        //if the user has not logged in
+        if(!isLoggedIn())
+        {
+        ?>
+                <div class="four columns push_four">
+          <h4>Please Login</h4>
+          <h3 style="color: red;"><?php echo $_GET['fail']; ?></h3>
+        <form name="login" action="login/login.php" method="post">
+          <p>Username: <input type="text" name="username" /><br>
+          Password: <input type="password" name="password" /></p>
+          <p id="login"><input type="submit" value="Login" /></p>
+        </form>
+                </div>
+        <?php }
+        else { ?>
     <!-- Content goes here -->
     <div class="row panel">
         <div class="large-3 columns">
@@ -59,4 +77,6 @@
   });
   </script>
 
-<?php include('inc/footer.php') ?>
+<?php } 
+include('inc/footer.php') 
+?>

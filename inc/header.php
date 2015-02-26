@@ -1,3 +1,8 @@
+<?php 
+date_default_timezone_set('America/Los_Angeles');
+include($path . "login/members-page.php");
+include($path . "login/header.php");
+?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -25,7 +30,7 @@
 	    <!-- Right Nav Section -->
 	    <ul class="right">
 	      <li><a href="#">Home</a></li>
-	      <li><a href="#">Logout</a></li>
+	      <li><a href="/login/logout.php">Logout</a></li>
 	    </ul>
 	  </section>
 	</nav>

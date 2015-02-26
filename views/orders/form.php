@@ -1,8 +1,11 @@
-<?php 
+<?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$path = "../../";
 include('../../inc/header.php'); 
+include($path . 'login/member-only-orders.php');
 include('../../ctrl/orderController.php');
+$_SESSION['items'] = [];
 ?>
 <form action="confirm.php" method="post">
 <div class="row">
@@ -30,7 +33,7 @@ include('../../ctrl/orderController.php');
 
 			</div>
 			<div class="large-3 columns">
-				<input type="text" id="datepicker" placeholder="Date" name="date" id="date">
+				<input type="text" id="datepicker" placeholder="Date" name="date">
 			</div>
 			<div class="large-3 columns">
 				<textarea placeholder="Special Instructions" name="s_instruct" id="s_instruct"></textarea>

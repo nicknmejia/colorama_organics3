@@ -1,0 +1,16 @@
+Admin status must me set manually.
+
+Place this code at top of page for user only pages: 
+<?php
+	include("../../template/members-page.php");
+	include("../../template/member-only-orders.php");
+?>
+
+Place this code at top of page for admin only pages:
+<?php
+	include("../../template/admins-page.php");
+	include("../../template/member-only-orders.php");
+?>
+
+Username is kept in the session variable and can be accessed with this code:
+$username = $_SESSION['userid'];

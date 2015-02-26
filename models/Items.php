@@ -6,7 +6,6 @@ function Items($table, $name)
 	  $DBH = new PDO("mysql:host=" . HOST . ";dbname=" . DB . "", USER, PASS);
 	  $query = $DBH->query('SELECT * FROM ' . $table . ' WHERE avail != 0');
 	  $query->setFetchMode(PDO::FETCH_ASSOC);
-
 	  echo "
 	    <div class='row panel'>
 	    <div id='$table'>$name</div>
@@ -25,6 +24,7 @@ function Items($table, $name)
 	    echo "<tr><td>" . $row['item_name'] . "</td>";
 	    echo "<td>" . $row['id'] . "</td>";
 	    echo "<td><input type='number' name='" . $table . $row['id'] . "'></td></tr>";
+	    array_push($_SESSION['items'], $table . $row['id']);
 		}
 
 	  echo "
